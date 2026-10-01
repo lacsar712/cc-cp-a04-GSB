@@ -134,3 +134,280 @@ td {
   font-size: 0.875rem;
   color: #475569;
 }
+
+/* ===== 顶栏导航：冷媒车道为首页 ===== */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.navbtn {
+  background: #e2e8f0;
+  color: #334155;
+  padding: 0.5rem 1rem;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+}
+
+.navbtn.active {
+  background: #0369a1;
+  color: #fff;
+}
+
+.readonly-note {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: #9a3412;
+  background: #ffedd5;
+  border: 1px solid #fdba74;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+}
+
+.card-title,
+.strip-title {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+/* ===== 加急记号 ===== */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.12rem 0.55rem;
+  white-space: nowrap;
+}
+
+.chip.rush {
+  background: #e0f2fe;
+  color: #075985;
+  border: 1px solid #7dd3fc;
+}
+
+.dash {
+  color: #94a3b8;
+}
+
+.freeze-note {
+  color: #64748b;
+  font-weight: 400;
+}
+
+label.check {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.rush-check {
+  min-width: 0;
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: #0369a1;
+}
+
+/* ===== 下一辆横幅 ===== */
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+}
+
+.banner-label {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.banner-id {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.banner-hint {
+  margin-left: auto;
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+.banner.next.rush {
+  background: #e0f2fe;
+  border-color: #38bdf8;
+  color: #0c4a6e;
+}
+
+.banner.next.normal {
+  background: #f0fdf4;
+  border-color: #4ade80;
+  color: #14532d;
+}
+
+.banner.busy {
+  background: #fefce8;
+  border-color: #facc15;
+  color: #713f12;
+}
+
+.banner.idle {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  color: #64748b;
+}
+
+/* ===== 处理中条 ===== */
+.proc-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.proc-chip {
+  background: #fef9c3;
+  color: #854d0e;
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.82rem;
+}
+
+/* ===== 双车道 ===== */
+.lanes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .lanes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lane {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 8%);
+  border-top: 4px solid #38bdf8;
+}
+
+.lane:nth-child(2) {
+  border-top-color: #94a3b8;
+}
+
+.lane.gated {
+  opacity: 0.72;
+}
+
+.lane-head h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.count {
+  background: #e2e8f0;
+  color: #334155;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  padding: 0.05rem 0.55rem;
+}
+
+.lane-sub {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.lane-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.lane-empty {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.qcard {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.7rem 0.8rem;
+  background: #f8fafc;
+}
+
+.qcard.is-next {
+  border: 2px solid #0284c7;
+  background: #f0f9ff;
+  box-shadow: 0 0 0 2px rgb(2 132 199 / 15%);
+}
+
+.qcard-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qid {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.next-badge {
+  margin-left: auto;
+  background: #0284c7;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+}
+
+.qcard-body {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.qprobe {
+  font-weight: 600;
+}
+
+.qtemp {
+  color: #475569;
+}
+
+.qcard-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qmeta {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+button.claim {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.82rem;
+  background: #0284c7;
+}
+
+button.claim:disabled {
+  background: #94a3b8;
+}
